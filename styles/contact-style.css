@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --btn-dark-bg-color: #ba4270;
+    --btn-light-bg-color: #bd6084;
+    --light-san-juan-blue: #6c8294;
+    --san-juan-blue: #36536b;
+    --side--nav-bg-color: rgb(27, 38, 47);
+    --top-section-bg-color: #EDF3F8;
+    --dark-bg-color: #1B262F;
+    --dark-white-color: rgb(223, 223, 223);
+    --light-blue: #90acc2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--top-section-bg-color);
+}
+
+main {
+    padding: 0 10px;
+}
+
+h1 {
+    font-weight: normal;
+    color: var(--san-juan-blue);
+}
+
+input,
+textarea {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-title {
+    font-size: 1.5rem;
+    margin-top: 48px;
+    text-align: center;
+}
+
+#contact--us {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.contact--us__form {
+    flex: 1;
+    width: 100%;
+    margin-right: 48px;
+}
+
+.contact--us__form input:not(.contact--us__checkbox input),
+.contact--us__form textarea {
+    display: block;
+    width: 100%;
+    margin: 26px 0;
+    font-size: 1rem;
+    color: var(--san-juan-blue);
+    padding: 16px;
+    border: none;
+    border-bottom: 1px solid var(--light-san-juan-blue);
+    background-color: var(--top-section-bg-color);
+}
+
+.contact--us__form input:focus:not(.contact--us__checkbox input),
+.contact--us__form textarea:focus {
+    outline: none;
+    border-bottom: 1px solid var(--san-juan-blue);
+}
+
+.contact--us__checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.contact--us__checkbox input {
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: var(--light-san-juan-blue);
+    display: grid;
+    place-items: center;
+}
+
+.contact--us__checkbox input::after {
+    content: '';
+    background-image: url('../assets/shared/desktop/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: none;
+}
+
+.contact--us__checkbox input.active::after {
+    display: block;
+}
+
+.contact--us__checkbox input:checked {
+    background-color: var(--btn-dark-bg-color);
+}
+
+.contact--us__checkbox span {
+    color: var(--light-san-juan-blue);
+    font-size: 12px;
+}
+
+.contact--us__checkbox span.active {
+    color: var(--san-juan-blue);
+}
+
+.contact--us__form button {
+    padding: 16px 38px;
+    background-color: var(--top-section-bg-color);
+    border: 1px solid var(--san-juan-blue);
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 32px 0;
+    transition: all 0.5s ease-out;
+    font-size: 1rem;
+    color: var(--san-juan-blue);
+}
+
+.contact--us__form button:hover {
+    background-color: var(--san-juan-blue);
+    color: white;
+}
+
+.contact--us__our--partner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 48px 0;
+    text-align: center;
+}
+
+.contact--us__our--partner__logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+    column-gap: 16px;
+    margin-top: 48px;
+    place-items: center;
+}
+
+@media only screen and (min-width: 500px) {
+    main {
+        padding: 0 50px;
+    }
+
+    .top-title {
+        font-size: 2rem;
+    }
+
+    .contact--us__checkbox input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact--us__checkbox input::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact--us__checkbox span {
+        font-size: 16px;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+    .top-title {
+        font-size: 3rem;
+    }
+
+    main {
+        padding: 0 100px;
+    }
+
+    .contact--us__checkbox input {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact--us__our--partner {
+        text-align: left;
+    }
+
+    .contact--us__our--partner__logos {
+        grid-template-columns: repeat(3, 1fr);
+        place-items: start;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+
+    .top-title {
+        text-align: left;
+    }
+
+    .line-break {
+        display: block;
+    }
+
+    #contact--us {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .contact--us__form {
+        margin: 0 48px 0 0;
+    }
+
+    .contact--us__checkbox input {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact--us__our--partner {
+        margin: 0 0 0 48px;
+    }
+}
