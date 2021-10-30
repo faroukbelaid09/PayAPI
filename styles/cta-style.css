@@ -1,0 +1,149 @@
+input,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.global--cta--btn {
+    padding: 15px 42px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 1.2rem;
+    background-color: var(--btn-dark-bg-color);
+    cursor: pointer;
+    transition: all ease-out 0.6s;
+    font-weight: bold;
+}
+
+.global--cta--btn:hover {
+    background-color: white;
+    color: var(--san-juan-blue);
+    border: 2px solid var(--btn-dark-bg-color);
+}
+
+
+.global__cta {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 16px;
+    
+}
+
+.global__cta h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--san-juan-blue);
+}
+
+.global--input--form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.global--input--form input {
+    appearance: none;
+    border: none;
+    border-radius: 25px;
+    padding: 22px 32px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-top: 32px;
+    font-weight: bold;
+    color: var(--san-juan-blue);
+}
+
+.global--input--form input:focus {
+    outline: none;
+}
+
+.global--input--form input::placeholder {
+    color: var(--light-san-juan-blue);
+}
+
+.global--input--form button {
+    width: 100%;
+    margin: 16px 0;
+    padding: 18px 42px;
+}
+
+@media only screen and (min-width: 500px) {
+    .global__cta h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .global--cta--btn {
+        padding: 18px 28px;
+        font-size: 1rem;
+    }
+
+    .global--input--form {
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 25px;
+        margin: 3rem 0 4rem 0;
+    }
+
+    .global--input--form input {
+        margin-top: 0;
+    }
+
+    .global--input--form button {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 45%;
+    }
+
+    .global__cta {
+        align-items: center;
+    }
+
+    .global__cta .global--input--form {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .global--cta--btn {
+        padding: 18px 28px;
+        font-size: 1rem;
+    }
+
+    /* email input section */
+
+    .global--input--form {
+        margin: 3rem 0 1rem 0;
+    }
+
+    .global--input--form button {
+        padding: 8px 20px;
+        width: 45%;
+    }
+
+    .global__cta .global--input--form button {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .global--cta--btn {
+        padding: 18px 40px;
+    }
+    
+    .global__cta {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 50px 40px;
+    }
+
+    .global__cta .global--input--form {
+        width: 50%;
+    }
+}

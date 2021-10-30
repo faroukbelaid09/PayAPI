@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --btn-dark-bg-color: #ba4270;
+    --btn-light-bg-color: #bd6084;
+    --light-san-juan-blue: #6c8294;
+    --san-juan-blue: #36536b;
+    --side--nav-bg-color: rgb(27, 38, 47);
+    --top-section-bg-color: #EDF3F8;
+    --dark-bg-color: #1B262F;
+    --dark-white-color: rgb(223, 223, 223);
+    --light-blue: #90acc2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--top-section-bg-color);
+}
+
+.bg--circle {
+    position: absolute;
+    right: -35%;
+    bottom: 90%;
+}
+
+main {
+    padding: 0 100px;
+}
+
+.top--title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--san-juan-blue);
+    margin-top: 32px;
+    text-align: center;
+}
+
+#pracing--plans {
+    margin: 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#pracing--plans div:nth-child(2) {
+    margin: 24px 0;
+}
+
+.pracing--plans__plan__title {
+    color: var(--btn-dark-bg-color);
+    font-weight: normal;
+}
+
+.pracing--plans__plan p {
+    margin: 16px 0;
+    line-height: 1.5;
+    color: var(--light-san-juan-blue);
+}
+
+.pracing--plans__plan__price {
+    font-weight: normal;
+    color: var(--san-juan-blue);
+    font-size: 3rem;
+}
+
+hr {
+    margin: 24px 0;
+}
+
+.pracing--plans__plan__benefits {
+    list-style-type: none;
+}
+
+.pracing--plans__plan__benefits__item {
+    margin: 16px auto;
+    width: 150px;
+    text-align: left;
+}
+
+.pracing--plans__plan__benefits__item span {
+    color: var(--san-juan-blue);
+    margin-left: 10px;
+}
+
+.pracing--plans__plan__benefits__item img.not--included {
+    visibility: hidden;
+}
+
+.pracing--plans__plan__benefits__item .not--included {
+    color: var(--light-blue);
+}
+
+.pracing--plans__plan__cta {
+    padding: 16px 32px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid var(--san-juan-blue);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.pracing--plans__plan__cta:hover {
+    background-color: var(--san-juan-blue);
+    color: white;
+}
+
+@media only screen and (min-width: 992px) {
+    .bg--circle {
+        bottom: 85%;
+    }
+
+    .top--title {
+        text-align: left;
+    }
+
+    #pracing--plans {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    #pracing--plans div:nth-child(2) {
+        margin: 0 24px;
+    }
+
+    .pracing--plans__plan__benefits__item {
+        margin: 16px 0;
+    }
+}
